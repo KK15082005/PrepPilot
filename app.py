@@ -1,4 +1,4 @@
-import streamlit as st
+
 import os
 import json
 import re
@@ -10,7 +10,7 @@ app = Flask(__name__)
 def home():
   return "PrepPilot backend is running"
 if __name__ == "main":
-  app.run(host = "0.0.0.0",port=8000)
+  app.run()
  
 port = int(os.environ.get("PORT",8000))
                           
@@ -132,6 +132,7 @@ if tasks:
 
 #         answer = result.choices[0].message.content
 #         st.write(answer)
+
 
 
 
