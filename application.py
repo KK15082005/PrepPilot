@@ -4,7 +4,13 @@ import json
 import re
 from dotenv import load_dotenv
 from openai import AzureOpenAI
-
+from flask import Flask
+app = Flask(__name__)
+@app.router("/")
+def home():
+  return "PrepPilot backend is running"
+  if __name__== "__main__":
+    app.run()
 port = int(os.environ.get("PORT",8000))
                           
 load_dotenv()
@@ -125,5 +131,6 @@ if tasks:
 
 #         answer = result.choices[0].message.content
 #         st.write(answer)
+
 
 
