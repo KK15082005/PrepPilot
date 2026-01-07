@@ -5,7 +5,8 @@ import re
 from dotenv import load_dotenv
 from openai import AzureOpenAI
 
-
+port = int(os.environ.get("PORT",8000))
+                          
 load_dotenv()
 
 client = AzureOpenAI(
@@ -124,4 +125,5 @@ if tasks:
 
 #         answer = result.choices[0].message.content
 #         st.write(answer)
+
 
